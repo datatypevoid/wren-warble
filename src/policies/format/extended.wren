@@ -26,10 +26,10 @@ class ExtendedFormatPolicy is FormatPolicy {
     var subchannel = options["subchannel"] || null
 
     options["format"] = "%(channel ? "[%(channel)" : "")" +
-    "%(channel ? (subchannel ? ":" : "") : "")" +
-    "%(subchannel ? (channel ? "%(subchannel)" : "[%(subchannel)") : "")" +
-    "%(channel || subchannel ? "] " : "")" +
-    "%(format ? format : "")"
+      "%(channel ? (subchannel ? ":" : "") : "")" +
+      "%(subchannel ? (channel ? "%(subchannel)" : "[%(subchannel)") : "")" +
+      "%(channel || subchannel ? "] " : "")" +
+      "%(format ? format : "")"
 
   }
 
