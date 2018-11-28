@@ -29,7 +29,11 @@ class Logger {
       }
     }
 
-    options["format"] = options["format"] || ""
+    if (options["format"] == null) {
+      options = {
+        "format": "%(options)"
+      }
+    }
 
     if (_filterPolicy.filter(options)) return
 
