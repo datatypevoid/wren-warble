@@ -1,0 +1,24 @@
+name = "wren-warble"
+version = "0.0.0"
+description = "A robust and simple policy-based logging utility for Wren."
+homepage = "https://github.com/datatypevoid/wren-warble"
+license = "ISC"
+main = "src/logger.wren"
+tags = [
+  "enum",
+  "wren"
+]
+
+[bugs]
+  url = "https://github.com/datatypevoid/wren-warble/issues"
+
+[author]
+  name = "David Newman"
+  url = "https://github.com/datatypevoid"
+  email = "david@nici.solutions"
+
+[[dependencies]]
+  name = "wren-test"
+  git = "https://github.com/datatypevoid/wren-test"
+  group = "test"
+  version = "master"
