@@ -25,7 +25,6 @@ class Logger {
 
     if (options is String) {
       options = {
-        "channel": "",
         "format": options
       }
     }
@@ -35,7 +34,6 @@ class Logger {
     }
 
     options["format"] = options["format"] || ""
-    options["channel"] = options["channel"] || ""
 
     if (_filterPolicy.filter(options)) return
 
