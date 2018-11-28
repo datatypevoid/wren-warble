@@ -26,6 +26,12 @@ class CompositeFilterPolicy is FilterPolicy {
       Fiber.abort("One or more filter policy instances are required to create a composite filter policy.")
     }
 
+    for (policy in filterPolicyList) {
+      if (policy is FilterPolicy == false) {
+        Fiber.abort("Invalid type for FilterPolicy: %(policy.type)")
+      }
+    }
+
     _filterPolicies = filterPolicyList
 
   }
