@@ -23,9 +23,9 @@ class Logger {
 
   log (options) {
 
-    if (options is String) {
+    if (options is String || options is Num || options is Bool) {
       options = {
-        "format": options
+        "format": "%(options)"
       }
     }
 
