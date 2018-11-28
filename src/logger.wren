@@ -23,14 +23,10 @@ class Logger {
 
   log (options) {
 
-    if (options is String || options is Num || options is Bool) {
+    if (options is Map == false) {
       options = {
         "format": "%(options)"
       }
-    }
-
-    if (options is Map == false) {
-      Fiber.abort("Expected 'Map' for log options; got %(options.type).")
     }
 
     options["format"] = options["format"] || ""
