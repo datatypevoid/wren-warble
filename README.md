@@ -13,7 +13,7 @@ A robust and simple policy-based logging utility for [Wren](https://github.com/w
 The [source](https://github.com/datatypevoid/wren-warble/blob/develop/src) files should be dropped into an existing project and the top module imported:
 
 ```wren
-import "./relative/path/to/wren-warble/module" for TOML
+import "./relative/path/to/wren-warble/logger" for Logger
 ```
 
 Additionally, the dependencies listed in the [package.toml](https://github.com/datatypevoid/wren-warble/blob/develop/package.toml) file should be cloned/downloaded and dropped in a directory named `wren_modules` (create it if it doesn't exist).
