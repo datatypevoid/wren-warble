@@ -28,6 +28,9 @@ class MockFilterPolicy is FilterPolicy {
   }
 
 
+  construct new () {}
+
+
   filter (options) {
     return _stubFn.call(options)
   }

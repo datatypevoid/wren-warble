@@ -28,6 +28,9 @@ class MockWritePolicy is WritePolicy {
   }
 
 
+  construct new () {}
+
+
   write (options) {
     _stubFn.call(options)
   }

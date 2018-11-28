@@ -28,6 +28,9 @@ class MockFormatPolicy is FormatPolicy {
   }
 
 
+  construct new () {}
+
+
   format (options) {
     _stubFn.call(options)
   }
