@@ -29,7 +29,7 @@ class MockWritePolicy is WritePolicy {
 
 
   write (options) {
-    _stubFn.call()
+    _stubFn.call(options)
   }
 
 
