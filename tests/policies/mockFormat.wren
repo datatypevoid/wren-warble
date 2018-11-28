@@ -2,14 +2,14 @@
  * Imports
  */
 
-import "../../../src/writePolicy" for WritePolicy
+import "../../src/formatPolicy" for FormatPolicy
 
 
 /*
  * Structures
  */
 
-class MockWritePolicy is WritePolicy {
+class MockFormatPolicy is FormatPolicy {
 
 
   /*
@@ -28,7 +28,7 @@ class MockWritePolicy is WritePolicy {
   }
 
 
-  write (options) {
+  format (options) {
     _stubFn.call(options)
   }
 
