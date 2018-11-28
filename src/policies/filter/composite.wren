@@ -18,7 +18,7 @@ class CompositeFilterPolicy is FilterPolicy {
 
   construct new (filterPolicyList) {
 
-    if (filterPolicyList is List == null) {
+    if (filterPolicyList is List == false) {
       Fiber.abort("Expected 'List' for 'filterPolicyList' parameter; got $(filterPolicyList.type).")
     }
 
