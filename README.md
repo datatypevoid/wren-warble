@@ -1,6 +1,6 @@
 # wren-warble
 
-A robust and simple policy-based logging utility for Wren. [Wren](https://github.com/wren-lang/wren).
+A robust and simple policy-based logging utility for [Wren](https://github.com/wren-lang/wren).
 
 
 ## Features
