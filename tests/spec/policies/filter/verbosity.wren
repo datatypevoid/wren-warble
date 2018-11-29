@@ -51,11 +51,11 @@ var VerbosityPolicyTest = Suite.new("VerbosityFilterPolicy") { |it|
   it.suite("filter (options)") { |it|
 
 
-    it.should("return false when verbosity of the message is less than the defined threshold") {
+    it.should("return true when verbosity of the message is less than the defined threshold") {
 
       var policy = VerbosityFilterPolicy.new(3)
 
-      Expect.call(policy.filter({ "verbosity": 2 })).toBeFalse
+      Expect.call(policy.filter({ "verbosity": 2 })).toBeTrue
 
     }
 
@@ -69,20 +69,20 @@ var VerbosityPolicyTest = Suite.new("VerbosityFilterPolicy") { |it|
     }
 
 
-    it.should("return false when verbosity of the message is not defined") {
+    it.should("return true when verbosity of the message is not defined") {
 
       var policy = VerbosityFilterPolicy.new(3)
 
-      Expect.call(policy.filter({})).toBeFalse
+      Expect.call(policy.filter({})).toBeTrue
 
     }
 
 
-    it.should("return true when verbosity of the message is greater than the defined threshold") {
+    it.should("return false when verbosity of the message is greater than the defined threshold") {
 
       var policy = VerbosityFilterPolicy.new(3)
 
-      Expect.call(policy.filter({ "verbosity": 5 })).toBeTrue
+      Expect.call(policy.filter({ "verbosity": 5 })).toBeFalse
 
     }
 

@@ -34,9 +34,9 @@ class VerbosityFilterPolicy is FilterPolicy {
 
   filter (options) {
 
-    if (!options["verbosity"]) return false
+    if (!options["verbosity"]) return true
 
-    return options["verbosity"] > _verbosityLevel
+    return options["verbosity"] < _verbosityLevel
 
   }
 
