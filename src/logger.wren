@@ -23,6 +23,9 @@ class Logger {
 
   log (options) {
 
+    var error
+    var fiber
+
     if (options is Map == false) {
       options = {
         "format": "%(options)"
@@ -35,11 +38,19 @@ class Logger {
       }
     }
 
-    if (_filterPolicy.filter(options)) return
+    fiber = Fiber.new {
 
-    _formatPolicy.format(options)
+      if (_filterPolicy.filter(options)) return
 
-    _writePolicy.write(options)
+      _formatPolicy.format(options)
+
+      _writePolicy.write(options)
+
+    }
+
+    error = fiber.try()
+
+    if (error) System.print("Error: logging failure: %(error)")
 
   }
 
