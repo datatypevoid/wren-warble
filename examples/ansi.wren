@@ -7,8 +7,8 @@ import "../src/policies/filter/noFilter" for NoFilterPolicy
 import "../src/policies/format/ansi/color" for ANSIBackgroundColor, ANSIForegroundColor, ANSIStyle
 import "../src/policies/format/ansi/module" for ANSIFormatPolicy
 import "../src/policies/format/composite" for CompositeFormatPolicy
-import "../src/policies/format/simple" for SimpleFormatPolicy
 import "../src/policies/format/extended" for ExtendedFormatPolicy
+import "../src/policies/format/simple" for SimpleFormatPolicy
 import "../src/policies/write/console" for ConsoleWritePolicy
 
 
