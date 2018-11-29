@@ -11,6 +11,7 @@ import "./policies/filter/channelSafeList" for ChannelSafeListFilterPolicyTest
 import "./policies/filter/composite" for CompositeFilterPolicyTest
 import "./policies/filter/noFilter" for NoFilterPolicyTest
 import "./policies/filter/verbosity" for VerbosityPolicyTest
+import "./policies/format/composite" for CompositeFormatPolicyTest
 import "./policies/format/extended" for ExtendedFormatPolicyTest
 import "./policies/format/simple" for SimpleFormatPolicyTest
 import "./policies/write/composite" for CompositeWritePolicyTest
@@ -29,6 +30,7 @@ var TESTS = [
   LoggerTest,
   NoFilterPolicyTest,
   VerbosityPolicyTest,
+  CompositeFormatPolicyTest,
   ExtendedFormatPolicyTest,
   SimpleFormatPolicyTest,
   CompositeWritePolicyTest,
