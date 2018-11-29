@@ -19,6 +19,48 @@ var debug = Logger.new(
 )
 
 debug.log("Hello world!")
+debug.log(42)
+debug.log(3.14159)
+debug.log(true)
+debug.log(false)
+debug.log(0 / 0)
+debug.log(-1 * (0 / 0))
+debug.log(1 / 0)
+debug.log(-1 * (1 / 0))
+
+debug.log([
+  1,
+  2,
+  3,
+  4,
+  [
+    "a",
+    "b",
+    "c",
+    {
+      "d": "value"
+    }
+  ]
+])
+
+debug.log({
+  "a": {
+    "b": {
+      "c": "value"
+    },
+    "d": {
+      "e": "value"
+    }
+  },
+  "f": {
+    "g": {
+      "h": "value"
+    },
+    "i": {
+      "j": "value"
+    }
+  }
+})
 
 debug.log({
   "format": "Hello all!",

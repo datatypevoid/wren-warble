@@ -23,23 +23,34 @@ class Logger {
 
   log (options) {
 
-    if (options is String) {
+    var error
+    var fiber
+
+    if (options is Map == false) {
       options = {
-        "format": options
+        "format": "%(options)"
       }
     }
 
-    if (options is Map == false) {
-      Fiber.abort("Expected 'Map' for log options; got %(options.type).")
+    if (options["format"] == null) {
+      options = {
+        "format": "%(options)"
+      }
     }
 
-    options["format"] = options["format"] || ""
+    fiber = Fiber.new {
 
-    if (_filterPolicy.filter(options)) return
+      if (_filterPolicy.filter(options)) return
 
-    _formatPolicy.format(options)
+      _formatPolicy.format(options)
 
-    _writePolicy.write(options)
+      _writePolicy.write(options)
+
+    }
+
+    error = fiber.try()
+
+    if (error) System.print("Error: logging failure: %(error)")
 
   }
 

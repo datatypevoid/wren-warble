@@ -19,7 +19,7 @@ class ChannelBlockListFilterPolicy is FilterPolicy {
   construct new (blockList) {
 
     if (blockList is List == false) {
-      Fiber.abort("Expected 'List' for 'blockList' parameter; got %(blockList.type)")
+      Fiber.abort("Expected 'List' for 'blockList' parameter; got %(blockList.type).")
     }
 
     _blockList = blockList

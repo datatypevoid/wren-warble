@@ -19,7 +19,7 @@ class ChannelSafeListFilterPolicy is FilterPolicy {
   construct new (safeList) {
 
     if (safeList is List == false) {
-      Fiber.abort("Expected 'List' for 'safeList' parameter; got %(safeList.type)")
+      Fiber.abort("Expected 'List' for 'safeList' parameter; got %(safeList.type).")
     }
 
     _safeList = safeList
