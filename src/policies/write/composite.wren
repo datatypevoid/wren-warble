@@ -19,7 +19,7 @@ class CompositeWritePolicy is WritePolicy {
   construct new (writePolicyList) {
 
     if (writePolicyList is List == false) {
-      Fiber.abort("Expected 'List' for 'writePolicyList' parameter; got $(writePolicyList.type).")
+      Fiber.abort("Expected 'List' for 'writePolicyList' parameter; got %(writePolicyList.type).")
     }
 
     if (writePolicyList.count == 0) {
