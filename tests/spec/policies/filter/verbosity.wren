@@ -2,7 +2,6 @@
  * Imports
  */
 
-import "../../../../src/logger" for Logger
 import "../../../../src/policies/filter/verbosity" for VerbosityFilterPolicy
 import "../../../../wren_modules/wren-test/dist/module" for Expect, Stub, Suite
 
@@ -44,7 +43,7 @@ var VerbosityPolicyTest = Suite.new("VerbosityFilterPolicy") { |it|
       ).toBeARuntimeError("Expected 'integer' for 'level' parameter; got List.")
 
     }
-    
+
 
   }
 

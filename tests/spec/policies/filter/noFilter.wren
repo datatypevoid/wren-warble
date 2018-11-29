@@ -2,7 +2,6 @@
  * Imports
  */
 
-import "../../../../src/logger" for Logger
 import "../../../../src/policies/filter/noFilter" for NoFilterPolicy
 import "../../../../wren_modules/wren-test/dist/module" for Expect, Stub, Suite
 

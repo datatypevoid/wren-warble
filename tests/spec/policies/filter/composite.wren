@@ -2,7 +2,6 @@
  * Imports
  */
 
-import "../../../../src/logger" for Logger
 import "../../../../src/policies/filter/composite" for CompositeFilterPolicy
 import "../../../../wren_modules/wren-test/dist/module" for Expect, Stub, Suite
 import "../../../policies/mockFilter" for MockFilterPolicy
