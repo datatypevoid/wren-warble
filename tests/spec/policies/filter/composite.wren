@@ -108,6 +108,7 @@ var CompositeFilterPolicyTest = Suite.new("CompositeFilterPolicy") { |it|
 
       var options = { "format": "" }
 
+      Expect.call(stub0.calls.count == 0).toBeTrue
       var filtered = policy.filter(options)
 
       checkStubs.call([stub0, stub1, stub2], options)
@@ -131,6 +132,7 @@ var CompositeFilterPolicyTest = Suite.new("CompositeFilterPolicy") { |it|
 
       var options = { "format": "" }
 
+      Expect.call(stub0.calls.count == 0).toBeTrue
       var filtered = policy.filter(options)
 
       checkStubs.call([stub0, stub1], options)
