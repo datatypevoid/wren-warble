@@ -1,23 +1,6 @@
-class ANSIForegroundColor {
-
-  static Black { "\u001b[30m" }
-
-  static Red { "\u001b[31m" }
-
-  static Green { "\u001b[32m" }
-
-  static Yellow { "\u001b[33m" }
-
-  static Blue { "\u001b[34m" }
-
-  static Magenta { "\u001b[35m" }
-
-  static Cyan { "\u001b[36m" }
-
-  static White { "\u001b[37m" }
-
-}
-
+/*
+ * Structures
+ */
 
 class ANSIBackgroundColor {
 
@@ -36,6 +19,27 @@ class ANSIBackgroundColor {
   static Cyan { "\u001b[46m" }
 
   static White { "\u001b[47m" }
+
+}
+
+
+class ANSIForegroundColor {
+
+  static Black { "\u001b[30m" }
+
+  static Red { "\u001b[31m" }
+
+  static Green { "\u001b[32m" }
+
+  static Yellow { "\u001b[33m" }
+
+  static Blue { "\u001b[34m" }
+
+  static Magenta { "\u001b[35m" }
+
+  static Cyan { "\u001b[36m" }
+
+  static White { "\u001b[37m" }
 
 }
 
