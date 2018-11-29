@@ -6,7 +6,7 @@ import "../../src/logger" for Logger
 import "../../src/policies/filter/noFilter" for NoFilterPolicy
 import "../../src/policies/format/simple" for SimpleFormatPolicy
 import "../../wren_modules/wren-test/dist/module" for Expect, Stub, Suite
-import "../policies/write/mockWrite" for MockWritePolicy
+import "../policies/mockWrite" for MockWritePolicy
 
 
 /*
