@@ -26,6 +26,12 @@ class CompositeWritePolicy is WritePolicy {
       Fiber.abort("One or more write policy instances are required to create a composite write policy.")
     }
 
+    for (policy in writePolicyList) {
+      if (policy is WritePolicy == false) {
+        Fiber.abort("Invalid type for WritePolicy: %(policy.type)")
+      }
+    }
+
     _writePolicies = writePolicyList
 
   }
